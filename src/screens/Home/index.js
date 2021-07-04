@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {
   View,
   TouchableOpacity,
@@ -15,10 +15,10 @@ import styles from './style';
 import container from '../../Styles/container';
 import TextBold from '../../Components/TextBold/index';
 import ListViews from '../../Components/ListView/index';
-// import BookMarkShare from '../../Components/BookMarkShare';
+import BookMarkShare from '../../Components/BookMarkShare';
 
 export const Home = props => {
-  const {loading, error, refetch, data} = useQuery(FETCH_ARTICLES_QUERY, {
+  const {loading, data} = useQuery(FETCH_ARTICLES_QUERY, {
     variables: {},
   });
 
@@ -125,7 +125,7 @@ export const Home = props => {
                         .then(this._showResult)
                         .catch(err => console.log(err))
                     }>
-                    {/* <BookMarkShare Time={rowData.date} /> */}
+                    <BookMarkShare Time={article.date_published} />
                   </TouchableOpacity>
                 </View>
               </View>

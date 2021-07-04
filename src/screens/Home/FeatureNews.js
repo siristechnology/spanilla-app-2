@@ -24,7 +24,7 @@ export const FeatureNews = ({articles}) => {
       showsHorizontalScrollIndicator={false}
       keyExtractor={article => article._id}
       renderItem={({item: article}) => (
-        <View key={article._id} style={styles.itemContainer}>
+        <View style={styles.itemContainer}>
           <TouchableOpacity
             style={{flex: 1, flexDirection: 'column'}}
             onPress={() =>
@@ -56,6 +56,7 @@ export const FeatureNews = ({articles}) => {
           </TouchableOpacity>
         </View>
       )}
+      style={styles.featureNewsContainer}
     />
   );
 };

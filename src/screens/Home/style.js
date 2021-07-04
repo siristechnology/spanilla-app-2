@@ -27,6 +27,9 @@ export default {
     height: 190,
     alignSelf: 'center',
   },
+  featureNewsContainer: {
+    marginLeft: -15,
+  },
   itemContainer: {
     backgroundColor: '#fff',
     shadowOffset: {width: 5, height: 5},
