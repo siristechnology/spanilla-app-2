@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">spanilla3</string>
+    <string name="app_name">Spanilla</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">oU_oOKCap9QZO2Co2nuvfmAU45PFGIM2BfBiS</string>
 </resources>
