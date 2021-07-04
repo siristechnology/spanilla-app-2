@@ -23,7 +23,7 @@ export default class exampleTabs extends Component {
       header: null,
     };
   };
-  componentWillMount() {
+  componentDidMount() {
     SplashScreen.hide();
   }
   render() {
@@ -49,7 +49,7 @@ export default class exampleTabs extends Component {
         )} */}
         {/* {this.state.page === "SearchScreen" && <Text>Screen5</Text>} */}
         {/* <AdvertisementBanner adUnitID={Config.banner.homeAdID} />  */}
-        <Tabbar
+        {/* <Tabbar
           tabbarBgColor="#fff"
           iconColor="#000"
           selectedIconColor="#0099FA"
@@ -66,7 +66,7 @@ export default class exampleTabs extends Component {
               icon: 'home',
             },
           ]}
-        />
+        /> */}
       </View>
     );
   }

@@ -28,7 +28,7 @@ export default class index extends Component {
               }}
             /> */}
             <HTML
-              html={this.props.Categories}
+              source={{html: this.props.Categories}}
               tagsStyles={{
                 resizeMode: 'contain',
                 lineHeight: 1.5,
@@ -54,7 +54,7 @@ export default class index extends Component {
             /> */}
             <View style={{marginVertical: 2}} />
             <HTML
-              html={this.props.Title}
+              source={{html: this.props.Title}}
               tagsStyles={tagsStyles}
               baseFontStyle={baseFontStyle}
               numberOfLines={1}
@@ -70,7 +70,7 @@ export default class index extends Component {
             }}>
             <ImageBackground
               imageStyle={{borderRadius: 5}}
-              source={this.props.source}
+              source={{uri: this.props.source}}
               style={{flex: 1}}
             />
           </View>

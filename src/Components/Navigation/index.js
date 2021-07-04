@@ -19,7 +19,10 @@ const Stack = createStackNavigator();
 
 const Navigation = () => (
   <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen name="MainScreen" component={MainScreen} />
       <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
@@ -27,46 +30,3 @@ const Navigation = () => (
 );
 
 export default Navigation;
-
-// export default Project = createStackNavigator({
-//   MainScreen: {
-//     screen: MainScreen,
-//   },
-//   // AboutUs: {
-//   //   screen: AboutUs,
-//   // },
-//   // Bookmarks: {
-//   //   screen: Bookmarks,
-//   // },
-//   // Categories: {
-//   //   screen: Categories,
-//   // },
-//   // ContactUs: {
-//   //   screen: ContactUs,
-//   // },
-//   // FAQ: {
-//   //   screen: FAQ,
-//   // },
-//   Home: {
-//     screen: Home,
-//   },
-//   // More: {
-//   //   screen: More,
-//   // },
-//   // Search:
-//   // {
-//   //   screen:Search,
-//   // },
-//   // ShareApp: {
-//   //   screen: ShareApp,
-//   // },
-//   // Details: {
-//   //   screen: Details,
-//   // },
-//   // PostList: {
-//   //   screen: PostList,
-//   // },
-//   // SearchCategoriesList: {
-//   //   screen: SearchCategoriesList,
-//   // },
-// });
