@@ -1,12 +1,17 @@
 {
-  "name": "spanilla3",
+  "name": "spanilla",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "android": "react-native run-android --variant unsignedDebug",
+    "log": "react-native log-android",
+    "build": "cd android && ./gradlew app:assembleSignedRelease && cd ..",
+    "bundle": "cd android && ./gradlew app:bundleSignedRelease && cd ..",
+    "refresh": "adb shell input keyevent 46 46",
+    "reset": "react-native start --reset-cache",
+    "test-query": "babel-node __tests__/graphql.integration.test.js",
+    "test": "jest --testMatch '**/?(*.)+(spec|test).[tj]s?(x)' ",
     "lint": "eslint ."
   },
   "dependencies": {

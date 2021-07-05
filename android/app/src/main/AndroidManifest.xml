@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.spanilla3">
+  package="com.siristechnology.spanilla">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

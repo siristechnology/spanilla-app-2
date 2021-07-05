@@ -131,7 +131,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.spanilla3"
+        applicationId "com.siristechnology.spanilla"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -147,12 +147,25 @@ android {
     }
     signingConfigs {
         debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
+            storeFile file('beta.keystore')
+            storePassword 'spanilla123'
+            keyAlias 'upload'
+            keyPassword 'spanilla123'
         }
     }
+
+    flavorDimensions "version"
+
+    productFlavors {
+        signed {
+            dimension "version"
+            signingConfig signingConfigs.debug
+        }
+        unsigned {
+            dimension "version"
+        }
+    }
+
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
